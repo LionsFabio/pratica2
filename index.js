@@ -19,6 +19,28 @@ for (let i = 0; i < numeros.length; i++) {
 console.log('A média dos números é ', (soma / numeros.length), '!');
       break;
     case "2":
+        for (let i = 0; i < numeros.length; i++) {
+            for (let j = i + 1; j < numeros.length; j++) {
+                if (numeros[i] > numeros[j]) {
+                    let aux = numeros[i];
+                    numeros[i] = numeros[j];
+                    numeros[j] = aux;          
+                }
+            }
+        }
+        
+        i = (numeros.length / 2);
+        j =  (numeros.length / 2) - 1;
+        
+        if (numeros.length % 2 == 0) {
+            soma = ((numeros[i] + numeros[j]) / 2);
+        } else {
+            soma = numeros[Math.floor(i)];
+        }
+        
+        console.log('A mediana dos valores é ', soma);
+        
+        console.log(numeros);
       break;
     case "3":
       for (let i = 0; i < numeros.length; i++) {
